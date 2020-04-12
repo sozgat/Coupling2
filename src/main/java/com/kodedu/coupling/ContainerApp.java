@@ -10,5 +10,6 @@ public class ContainerApp {
         ApplicationContext applicationContext =new ClassPathXmlApplicationContext("classpath:spring-config.xml");
         PrinterService printerService = applicationContext.getBean(PrinterService.class);
         printerService.doService();
+        //Test
     }
 }
