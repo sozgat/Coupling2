@@ -7,8 +7,9 @@
 
     <bean id="lazerPrinter" class="com.kodedu.coupling.LazerPrinter"></bean>
 
-    <bean  class="com.kodedu.coupling.PrinterService">
+    <bean id="printerService" class="com.kodedu.coupling.PrinterService">
         <!-- DI - Dependency Injection -->
-        <constructor-arg ref="lazerPrinter" />
+        <!-- <constructor-arg ref="lazerPrinter" /> --> <!-- Constructor Injection -->
+        <property name="printer" ref="classicPrinter"/> <!-- Setter Injection -->
     </bean>
 </beans>
