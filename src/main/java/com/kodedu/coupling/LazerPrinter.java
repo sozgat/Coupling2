@@ -1,5 +1,8 @@
 package com.kodedu.coupling;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class LazerPrinter implements Printer {
 
 

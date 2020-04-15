@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="classicPrinter" class="com.kodedu.coupling.ClassicPrinter"></bean>
+    <context:component-scan base-package="com.kodedu.coupling"/>
 
-    <bean id="lazerPrinter" class="com.kodedu.coupling.LazerPrinter"></bean>
+    <!--<bean id="classicPrinter" class="com.kodedu.coupling.ClassicPrinter"></bean>-->
 
-    <bean id="printerService" class="com.kodedu.coupling.PrinterService">
-        <!-- DI - Dependency Injection -->
-        <!-- <constructor-arg ref="lazerPrinter" /> --> <!-- Constructor Injection -->
-        <property name="printer" ref="classicPrinter"/> <!-- Setter Injection -->
-    </bean>
+    <!--<bean id="lazerPrinter" class="com.kodedu.coupling.LazerPrinter"></bean>-->
+
+    <!--<bean id="printerService" class="com.kodedu.coupling.PrinterService">-->
+        <!--&lt;!&ndash; DI - Dependency Injection &ndash;&gt;-->
+        <!--&lt;!&ndash; <constructor-arg ref="lazerPrinter" /> &ndash;&gt; &lt;!&ndash; Constructor Injection &ndash;&gt;-->
+        <!--<property name="printer" ref="classicPrinter"/> &lt;!&ndash; Setter Injection &ndash;&gt;-->
+    <!--</bean>-->
 </beans>
